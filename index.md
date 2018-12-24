@@ -31,17 +31,17 @@ Before start, you need to know that Microsoft Azure Function operate on windows 
 
 **Windows**
 
-- .NET
-- Java
-- JavaScript
+   - .NET
+   - Java
+   - JavaScript
 
 **Linux**
 
-- .NET
+   - .NET
 
-- JavaScript
+   - JavaScript
 
-- Docker containers
+   - Docker containers
 
 
 In order to develop a server-less application in **Java** you you have to two options, 
