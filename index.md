@@ -63,6 +63,6 @@ And you need to compile that code locally in your machine and deploy it into you
 
 On the other hand, you can use JavaScript for more easier development, you can choose it to handle http request for example, and it can be edited directly from the cloud, so you don't need Maven or VS code.
 
-To get start using Amazon Function, you can visit Microsoft website to 
+To get start using Amazon Function, you can visit Microsoft website to [Microsoft Azure functions](https://azure.microsoft.com/en-us/services/functions/) 
 
 
