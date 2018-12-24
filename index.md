@@ -31,17 +31,17 @@ Before start, you need to know that Microsoft Azure Function operate on windows 
 
 **Windows**
 
-   - .NET
-   - Java
-   - JavaScript
+- .NET
+- Java
+- JavaScript
 
 **Linux**
 
-   - .NET
+- .NET
 
-   - JavaScript
+- JavaScript
 
-   - Docker containers
+- Docker containers
 
 
 In order to develop a server-less application in **Java** you you have to two options, 
@@ -59,10 +59,19 @@ In order to develop a server-less application in **Java** you you have to two op
 
 And you need to compile that code locally in your machine and deploy it into your Azure function application.
 
-
-
 On the other hand, you can use JavaScript for more easier development, you can choose it to handle http request for example, and it can be edited directly from the cloud, so you don't need Maven or VS code.
 
-To get start using Amazon Function, you can visit Microsoft website to [Microsoft Azure functions](https://azure.microsoft.com/en-us/services/functions/) 
+To get start using Amazon Function, you can visit Microsoft Azure them login in to your portal. 
 
+1. From the left side, go to ***All resources***
+2. Click on *create **new resource***
+3. Choose ***Serverless Function App***
+4. Choose a name like *cpit490app* and make sure to use ***JavaScript*** as a runtime stack
+5. Wait till app deployment ends then, go to the resource
+6. from the left side of your function app, go to ***functions*** and ***create new function*** and choose ***HTTP Trigger***  and name it i.e. *sayHello*
+7. After creating the function you will see JavaScript code, this code basically return "Hello" with the given name on the URL.
+8. Click on ***Get function URL*** and copy your URL and add the following on the end of it ?name= <'your name'> and request this URL on your browser. You should see ***Hello, <'your name '>***
 
+This is a very simple example of an Azure function App.
+
+We made two HTML web pages that make request to an Azure Function app, you may see it [here](https://github.com/fcit16/cpit490).
