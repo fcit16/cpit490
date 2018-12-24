@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://iam.kau.edu.sa/style/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="body sayhi" ng-app="myApp">
+        <div class="wrapper" ng-controller="MyCtrl">
+
+            <div class="name">What is your name ?</div>
+
+            <input class="input-name" type='text' />
+
+            <button class="btn-lg btn btn-light" onclick="myFunction()">Click me</button>
+
+            <br><br>
+
+            <div class="resp"></div>
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+
+            var name = document.getElementsByClassName("input-name")[0].value;
+            console.log(name);
+
+            // Javascript Azure Function
+            var myURL = "https://cpit490fun.azurewebsites.net/api/sayHi?name=" + name;
+
+            // Java Azure Function
+            /*var myURL = "https://cpit490sayhi.azurewebsites.net/api/HttpTrigger-Java?code=vzfP2aJQcGmG6z6amculWAcT/sBTugDLAaXF8ykdTZlFi3caacQ4qQ==&name="+name;*/
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', myURL, true);
+
+            // If specified, responseType must be empty string or "text"
+            xhr.responseType = 'text';
+
+            xhr.onload = function() {
+                if (xhr.readyState === xhr.DONE) {
+                    if (xhr.status === 200) {
+                        console.log(xhr.response);
+                        console.log(xhr.responseText);
+                        document.getElementsByClassName("resp")[0].innerHTML = xhr.responseText;
+                    } else {
+                        document.getElementsByClassName("resp")[0].innerHTML = "Failed to connect to the api";
+                    }
+                }
+            };
+
+            xhr.send(null);
+        }
+
+    </script>
+</body>
+
+</html>
